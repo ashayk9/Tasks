@@ -1,0 +1,24 @@
+<h1>home</h1>
+
+<h3>Search</h3>
+
+<form action="/" method="POST">
+    <input type="text" name="product_name" placeholder="name of model">
+    <input type="text" name="colour" placeholder="colour">
+    <input type="text" name="ram" placeholder="ram">
+    <input type="text" name="storage" placeholder="storage">
+    <input type="submit" value="submit">
+</form>
+
+<% specific_p.forEach(function(product){ %>
+    <div>
+        <img src="<%=product.img%>" alt="" width="100px">
+        <p><%=product.product_name %></p>
+        <ul>
+            <li><%=product.price %></li>
+            <li><%=product.ram %></li>
+            <li><%=product.colour %></li>
+            <li><%=product.storage %></li>
+        </ul>
+    </div>
+<% })%>
